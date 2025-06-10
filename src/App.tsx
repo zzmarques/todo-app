@@ -1,10 +1,10 @@
-
+import TodoMain from "./components/TodoMain";
 
 function App() {
 
   return (
     <>
-      <h1>OLa</h1>
+      <TodoMain/>
     </>
   )
 }
