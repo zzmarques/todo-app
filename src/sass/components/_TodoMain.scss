@@ -8,8 +8,17 @@
     height: 100vh;
 
     background-image: url("../../assets/imgs/bg-mobile-light.jpg"),
-    linear-gradient(to bottom, vars.$very-light-gray 60%, vars.$very-light-gray 100%);
+    linear-gradient(to bottom, vars.$very-light-grayish-blue 60%, vars.$very-light-grayish-blue 100%);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: top;
+
+    .container-todos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        gap: 30px;
+        width: 100%;
+    }
 }

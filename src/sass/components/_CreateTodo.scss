@@ -7,20 +7,11 @@
 
     width: 100%;
     height: 60px;
-    max-width: 320px;
+    max-width: 340px;
     padding-inline: 20px;
     
     background: vars.$color-white;
     border-radius: 8px;
-
-    .mark {
-        flex-shrink: 0;
-        width: 25px;
-        height: 25px;
-
-        border-radius: 50%;
-        border: 1px solid vars.$light-grayish-blue;
-    }
 
     .container-input {
         position: relative;
@@ -33,7 +24,7 @@
             width: 100%;
             height: 100%;
             padding: 5px 5px 0px 5px;
-            font-size: 1.1rem;
+            font-size: .8rem;
             font-weight: 400;
             color: vars.$very-dark-grayish-blue-l;
             

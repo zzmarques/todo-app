@@ -1,6 +1,17 @@
+@use "vars";
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Josefin Sans", sans-serif;
 }
+
+.mark {
+        flex-shrink: 0;
+        width: 25px;
+        height: 25px;
+
+        border-radius: 50%;
+        border: 1px solid vars.$light-grayish-blue;
+};
