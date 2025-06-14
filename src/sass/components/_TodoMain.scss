@@ -9,7 +9,7 @@
 
     background-image: url("../../assets/imgs/bg-mobile-light.jpg"),
     linear-gradient(to bottom, vars.$very-light-grayish-blue 60%, vars.$very-light-grayish-blue 100%);
-    background-size: contain;
+    background-size: 100% 200px, 100% 100%; 
     background-repeat: no-repeat;
     background-position: top;
 
