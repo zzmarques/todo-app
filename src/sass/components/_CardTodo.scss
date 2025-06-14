@@ -7,56 +7,17 @@
     justify-content: space-between;
 
     width: 100%;
-    height: 340px;
+    height: 420px;
     max-width: 340px;
     
     background: vars.$color-white;
     border-radius: 8px;
 
-    .todo {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        position: relative;
-        height: 60px;
-        padding-inline: 20px;
-
-
-        &::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 100%;
-            height: .5px;
-            background: vars.$light-grayish-blue;
-        }
-
-        .container-mtn {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-
-            .container-name {
-                padding-top: 4px;
-
-                span {
-                    font-size: .8rem;
-                    font-weight: 400;
-                    color: vars.$very-dark-grayish-blue-l;
-                }
-            }
-        }
-
-        .btn-ex {
-            @include mixins.center;
-            padding-top: 3px;
-
-            svg {
-                font-size: 1.2rem;
-                color: vars.$very-dark-grayish-blue-l;
-            }
-        }
+    .container-card-todos {
+        height: 360px;
+        overflow: hidden;
+        overflow-y: scroll;
+        scrollbar-width: none;
     }
 
     .container-footer {
