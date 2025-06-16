@@ -1,0 +1,13 @@
+@use "./vars";
+
+.btn-clear {
+
+    height: 40px;
+    
+    background: transparent;  
+    border: none;
+
+    font-size: .9rem;
+    font-weight: 400;
+    color:  vars.$dark-grayish-blue-l;
+}
