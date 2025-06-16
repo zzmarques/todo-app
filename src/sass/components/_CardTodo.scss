@@ -7,14 +7,14 @@
     justify-content: space-between;
 
     width: 100%;
-    height: 420px;
+    height: 386px;
     max-width: 340px;
     
     background: vars.$color-white;
     border-radius: 8px;
 
     .container-card-todos {
-        height: 360px;
+        height: 333px;
         overflow: hidden;
         overflow-y: scroll;
         scrollbar-width: none;
@@ -24,7 +24,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        height: 60px;
+        height: 55px;
         padding-inline: 20px;
 
         .sub {
