@@ -1,4 +1,5 @@
 import "../../sass/components/_TodoMain.scss";
+import AsideNav from "../AsideNav";
 import CardTodo from "../CardTodo";
 import CreateTodo from "../CreateTodo";
 import Header from "../Header";
@@ -13,6 +14,8 @@ const TodoMain = () => {
                 <CreateTodo/>
 
                 <CardTodo/>
+
+                <AsideNav/>
             </section>
         </main>
     );

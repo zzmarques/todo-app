@@ -1,5 +1,17 @@
+@use "vars";
+
 @mixin center {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@mixin containerP {
+    width: 100%;
+    height: 55px;
+    max-width: 340px;
+    padding-inline: 20px;
+    
+    background: vars.$color-white;
+    border-radius: 8px;
 }
