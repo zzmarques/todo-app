@@ -1,4 +1,5 @@
 import "../../sass/components/_CardTodo.scss";
+import BtnDelete from "../BtnDelete";
 import Todo from "../Todo";
 
 
@@ -18,9 +19,7 @@ const CardTodo = () => {
             <div className="container-footer">
                 <span className="sub">5 items left</span>
 
-                <div className="btn-clear">
-                    <span className="sub">Clear Completed</span>
-                </div>
+                <BtnDelete />
             </div>
         </section>
     );
