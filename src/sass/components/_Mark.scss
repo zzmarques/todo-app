@@ -1,4 +1,5 @@
 @use "../vars";
+@use "../mixins";
 
 .mark {
     flex-shrink: 0;
@@ -8,3 +9,14 @@
     border-radius: 50%;
     border: 1px solid vars.$light-grayish-blue;
 };
+
+.active {
+    @include mixins.center;
+    background-image: vars.$Check-Background;
+    border: 0;
+
+    svg {
+        font-size: 1.3rem;
+        color: vars.$color-white;
+    }
+}
