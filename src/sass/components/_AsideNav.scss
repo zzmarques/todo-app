@@ -1,0 +1,21 @@
+@use "../mixins";
+@use "../vars";
+
+.aside-nav {
+    
+    @include mixins.center;
+    @include mixins.containerP;
+
+
+    ul {
+        display: flex;
+        gap: 15px;
+        list-style: none;
+
+        li {
+            font-size: 18px;
+            font-weight: 400;
+            color: vars.$dark-grayish-blue-l;
+        }
+    }
+}
