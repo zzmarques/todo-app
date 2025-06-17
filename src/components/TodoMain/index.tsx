@@ -17,6 +17,10 @@ const TodoMain = () => {
 
                 <AsideNav/>
             </section>
+
+            <div className="conatiner-text">
+                <p>Drag and drop to reorder list</p>
+            </div>
         </main>
     );
 };

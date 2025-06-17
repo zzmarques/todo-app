@@ -8,7 +8,7 @@
     height: 100vh;
 
     background-image: url("../../assets/imgs/bg-mobile-light.jpg"),
-    linear-gradient(to bottom, vars.$very-light-grayish-blue 60%, vars.$very-light-grayish-blue 100%);
+    linear-gradient(to bottom, vars.$very-light-gray 60%, vars.$very-light-gray 100%);
     background-size: 100% 200px, 100% 100%; 
     background-repeat: no-repeat;
     background-position: top;
@@ -20,6 +20,16 @@
 
         gap: 20px;
         width: 100%;
+    }
+
+    .conatiner-text {
+        margin-top: 50px;
+
+        p {
+            font-size: 1.125rem;
+            font-weight: 400;
+            color: vars.$dark-grayish-blue-l;
+        }
     }
 }
 
@@ -46,8 +56,16 @@
         }
     }
 
+    .conatiner-text {
+
+        p {gi
+            color: vars.$very-dark-grayish-blue-100
+        }
+    }
+
     .card-todo {
         background: vars.$very-dark-desaturated-blue;
+        box-shadow: none;
 
         .container-card-todos {
             .todo {
