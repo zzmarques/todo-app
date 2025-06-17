@@ -1,7 +1,7 @@
 @use "./vars";
 
 .btn-clear {
-
+    cursor: pointer;
     height: 40px;
     
     background: transparent;  
@@ -10,4 +10,20 @@
     font-size: .9rem;
     font-weight: 400;
     color:  vars.$dark-grayish-blue-l;
+}
+
+.btn-dark-mode {
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    width: 37px;
+    height: 37px;
+
+    background: transparent;  
+    border: none;
+
+    font-size: 1.3rem;
+    color: vars.$very-light-gray;
 }
