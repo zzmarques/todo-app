@@ -25,16 +25,4 @@
             text-transform: uppercase;
         }
     }
-
-    .btn-dark-mode {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        width: 37px;
-        height: 37px;
-
-        font-size: 1.3rem;
-        color: vars.$very-light-gray;
-    }
-
 }

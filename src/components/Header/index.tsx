@@ -1,6 +1,5 @@
-import { FaMoon } from "react-icons/fa";
-import { IoSunnySharp } from "react-icons/io5";
 import "../../sass/components/_Header.scss";
+import BtnDarkMode from "../BtnDarkMode";
 
 const Header = () => {
     return (
@@ -9,9 +8,7 @@ const Header = () => {
                 <h1>Todo</h1>
             </div>
 
-            <div className="btn-dark-mode">
-                <FaMoon />
-            </div>
+            <BtnDarkMode/>
         </header>
     );
 };
