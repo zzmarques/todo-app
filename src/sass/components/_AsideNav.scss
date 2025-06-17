@@ -6,7 +6,6 @@
     @include mixins.center;
     @include mixins.containerP;
 
-
     ul {
         display: flex;
         gap: 15px;
@@ -16,6 +15,10 @@
             font-size: 18px;
             font-weight: 400;
             color: vars.$dark-grayish-blue-l;
+
+            &:hover {
+                color: vars.$bright-blue;
+            }
         }
     }
 }

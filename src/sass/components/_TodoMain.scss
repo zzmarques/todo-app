@@ -22,3 +22,82 @@
         width: 100%;
     }
 }
+
+.dark {
+    background-image: url("../../assets/imgs/bg-mobile-dark.jpg"),
+    linear-gradient(to bottom, vars.$very-dark-blue 60%, vars.$very-dark-blue 100%);
+
+    .container-todos {
+
+        .container-create-todo {
+            background: vars.$very-dark-desaturated-blue;
+
+            .container-input {
+                input {
+    
+                    color: vars.$light-grayish-blue-200;
+    
+                    &::placeholder {
+                        color: vars.$dark-grayish-blue;
+                    }
+                }
+            }
+
+        }
+    }
+
+    .card-todo {
+        background: vars.$very-dark-desaturated-blue;
+
+        .container-card-todos {
+            .todo {
+                border-bottom: 1px solid vars.$very-dark-grayish-blue-200;
+                .container-mtn {
+
+                    .container-name {
+
+                        span {
+                            color: vars.$light-grayish-blue-200;
+                        }
+                    }
+                }
+
+                .btn-ex {
+
+                    svg {
+                        color: vars.$very-dark-grayish-blue-100;
+                    }
+                }
+            }
+        }
+
+        .container-footer {
+            .sub {
+                color:  vars.$dark-grayish-blue;
+            }
+
+            .btn-clear {
+                color:  vars.$dark-grayish-blue;
+            }
+        }
+    }
+
+    .aside-nav {
+        background: vars.$very-dark-desaturated-blue;
+
+        ul {
+            li {
+                color:  vars.$dark-grayish-blue;
+
+                &:hover {
+                    color:  vars.$light-grayish-blue-100;
+                }
+            }
+        }
+    }
+
+    .mark {
+        border-color: vars.$very-dark-grayish-blue-200;
+
+    }
+}
