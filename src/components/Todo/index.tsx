@@ -2,15 +2,23 @@ import { TfiClose } from "react-icons/tfi";
 import "../../sass/components/_Todo.scss";
 import Mark from "../Mark";
 
+interface Task {
+    name: string;
+    isActive: boolean;
+}
 
-const Todo = () => {
+interface TodoProps {
+    task: Task;
+}
+
+const Todo = ({ task }: TodoProps) => {
     return (
         <div className="todo">
             <div className="container-mtn">
                 <Mark />
 
                 <div className="container-name">
-                    <span className="todo-name">Complete online JavaScript course</span>
+                    <span className="todo-name">{task.name}</span>
                 </div>
             </div>
 

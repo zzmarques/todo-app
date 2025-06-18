@@ -1,19 +1,27 @@
+import { useState } from "react";
 import "../../sass/components/_TodoMain.scss";
 import AsideNav from "../AsideNav";
 import CardTodo from "../CardTodo";
 import CreateTodo from "../CreateTodo";
 import Header from "../Header";
+import type { TodoType } from "../../types/todo";
 
 const TodoMain = () => {
+
+    const [todos, setTodos] = useState<TodoType[]>([]);
+
+    const handleAddTodo = (todo: TodoType) => {
+        setTodos((prev) => [...prev, todo]);
+    };    
     
     return (
         <main className='todo-main'>
             <Header/>
 
             <section className="container-todos">
-                <CreateTodo/>
+                <CreateTodo onAddTodo={handleAddTodo}/>
 
-                <CardTodo/>
+                <CardTodo todos={todos}/>
 
                 <AsideNav/>
             </section>
