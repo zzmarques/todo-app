@@ -8,12 +8,24 @@
 
     border-radius: 50%;
     border: 1px solid vars.$light-grayish-blue;
+
+    &:hover {
+        border: 1px solid transparent;
+        background: 
+            linear-gradient(white, white) padding-box, 
+            vars.$Check-Background border-box;
+    }
 };
 
 .active {
     @include mixins.center;
     background-image: vars.$Check-Background;
     border: 0;
+
+    &:hover {
+        border: 0;
+        background-image: vars.$Check-Background !important;
+    }
 
     svg {
         font-size: 1.3rem;
