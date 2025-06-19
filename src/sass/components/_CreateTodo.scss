@@ -23,6 +23,10 @@
             font-weight: 400;
             color: vars.$very-dark-grayish-blue-l;
             
+            @include mixins.desktop {
+                font-size: 1.1rem;
+                padding-top: 4px;
+            }
 
             background: transparent;
             border: none;
