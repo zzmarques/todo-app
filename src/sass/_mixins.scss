@@ -14,4 +14,14 @@
     
     background: vars.$color-white;
     border-radius: 8px;
+
+    @include desktop {
+        max-width: 550px;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: 1024px) {
+        @content;
+    }
 }

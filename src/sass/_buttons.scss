@@ -10,6 +10,10 @@
     font-size: .9rem;
     font-weight: 400;
     color:  vars.$dark-grayish-blue-l;
+
+    &:hover {
+        color: vars.$very-dark-grayish-blue-l;
+    }
 }
 
 .btn-dark-mode {
