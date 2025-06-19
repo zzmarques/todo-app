@@ -36,3 +36,10 @@
         }
     }
 }
+
+.complete {
+    span {
+        color: vars.$light-grayish-blue !important;
+        text-decoration: line-through;
+    }
+}

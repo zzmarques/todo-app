@@ -4,17 +4,24 @@ import BtnDelete from "../BtnDelete";
 import Todo from "../Todo";
 
 
-interface TodoListProps {
+type CardTodoProps = {
     todos: TodoType[];
-}
+    onToggleTodo: (id: number) => void;
+    onDeleteTodo: (id: number) => void;
+};
 
-const CardTodo = ({ todos }: TodoListProps) => {
+const CardTodo = ({ todos, onToggleTodo, onDeleteTodo }: CardTodoProps) => {
     return (
         <section className="card-todo">
 
             <div className="container-card-todos">
-                {todos.map((task, index) => (
-                    <Todo key={index} task={task} />
+                {todos.map((todo) => (
+                    <Todo 
+                        key={todo.id}
+                        task={todo}
+                        onToggle={() => onToggleTodo(todo.id)}
+                        onDelete={() => onDeleteTodo(todo.id)}
+                    />
                 ))}
             </div>
 

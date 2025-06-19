@@ -1,19 +1,19 @@
 import { GrFormCheckmark } from "react-icons/gr";
 import "../../sass/components/_Mark.scss";
-import { useState } from "react";
 
+type MarkProps = {
+    isActive: boolean;
+    onToggle: () => void;
+};
 
-const Mark = () => {
-
-    const [mark, setMark] = useState<boolean>(false);
-
-    const toggleMark = () => {
-        setMark(prev => !prev)
-    };
+const Mark = ({ isActive, onToggle }: MarkProps) => {
 
     return (
-        <div className={`mark ${mark && 'active'}`} onClick={toggleMark}>
-            {mark && <GrFormCheckmark/>}
+        <div 
+            className={`mark ${isActive ? "active" : ""}`} 
+            onClick={onToggle}
+        >
+            {isActive && <GrFormCheckmark />}
         </div>
     );
 };

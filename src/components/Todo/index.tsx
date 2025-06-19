@@ -1,28 +1,26 @@
 import { TfiClose } from "react-icons/tfi";
 import "../../sass/components/_Todo.scss";
 import Mark from "../Mark";
+import type { TodoType } from "../../types/todo";
 
-interface Task {
-    name: string;
-    isActive: boolean;
-}
+type TodoProps = {
+    task: TodoType;
+    onToggle: () => void;
+    onDelete: () => void;
+};
 
-interface TodoProps {
-    task: Task;
-}
-
-const Todo = ({ task }: TodoProps) => {
+const Todo = ({ task, onToggle, onDelete }: TodoProps) => {
     return (
-        <div className="todo">
+        <div className={`todo ${task.isActive ? "complete" : ""}`}>
             <div className="container-mtn">
-                <Mark />
+                <Mark isActive={task.isActive} onToggle={onToggle} />
 
                 <div className="container-name">
                     <span className="todo-name">{task.name}</span>
                 </div>
             </div>
 
-            <div className="btn-ex">
+            <div className="btn-ex" onClick={onDelete}>
                 <TfiClose />
             </div>
         </div>
