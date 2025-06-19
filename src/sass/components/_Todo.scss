@@ -22,6 +22,10 @@
                 font-size: .8rem;
                 font-weight: 400;
                 color: vars.$very-dark-grayish-blue-l;
+
+                @include mixins.desktop {
+                    font-size: 1.1rem;
+                }
             }
         }
     }
@@ -33,13 +37,17 @@
         svg {
             font-size: .9rem;
             color: vars.$very-dark-grayish-blue-l;
+
+            @include mixins.desktop {
+                font-size: 1.2rem;
+            }
         }
     }
 }
 
 .complete {
     span {
-        color: vars.$light-grayish-blue !important;
+        color: vars.$very-light-grayish-blue!important;
         text-decoration: line-through;
     }
 }
