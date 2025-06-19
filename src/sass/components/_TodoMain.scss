@@ -1,4 +1,5 @@
 @use "../vars";
+@use "../mixins";
 
 .todo-main {
     display: flex;
@@ -12,6 +13,12 @@
     background-size: 100% 200px, 100% 100%; 
     background-repeat: no-repeat;
     background-position: top;
+
+    @include mixins.desktop {
+        background-image: url("../../assets/imgs/bg-desktop-light.jpg"),
+        linear-gradient(to bottom, vars.$very-light-gray 60%, vars.$very-light-gray 100%);
+        background-size: 100% 300px, 100% 100%; 
+    }
 
     .container-todos {
         display: flex;
@@ -37,6 +44,11 @@
     background-image: url("../../assets/imgs/bg-mobile-dark.jpg"),
     linear-gradient(to bottom, vars.$very-dark-blue 60%, vars.$very-dark-blue 100%);
 
+    @include mixins.desktop {
+        background-image: url("../../assets/imgs/bg-desktop-dark.jpg"),
+        linear-gradient(to bottom, vars.$very-dark-blue 60%, vars.$very-dark-blue 100%);
+    }
+
     .container-todos {
 
         .container-create-todo {
@@ -59,7 +71,7 @@
     .conatiner-text {
 
         p {
-            color: vars.$very-dark-grayish-blue-100
+            color: vars.$very-dark-grayish-blue-100;
         }
     }
 
@@ -87,6 +99,13 @@
                     }
                 }
             }
+
+            .complete {
+                span {
+                    color: vars.$very-dark-grayish-blue-100 !important;
+                    text-decoration: line-through;
+                }
+            }
         }
 
         .container-footer {
@@ -96,6 +115,10 @@
 
             .btn-clear {
                 color:  vars.$dark-grayish-blue;
+
+                &:hover {
+                    color:  vars.$light-grayish-blue-100;
+                }
             }
         }
     }
@@ -117,5 +140,17 @@
     .mark {
         border-color: vars.$very-dark-grayish-blue-200;
 
+        &:hover {
+            background: 
+                linear-gradient(vars.$very-dark-desaturated-blue, vars.$very-dark-desaturated-blue) padding-box, 
+                vars.$Check-Background border-box;
+        }
+
+    }
+
+    .conatiner-text {
+        p {
+            color: vars.$very-dark-grayish-blue-100;
+        }
     }
 }
