@@ -6,6 +6,12 @@
     @include mixins.center;
     @include mixins.containerP;
 
+    @include mixins.desktop {
+        display: none;
+        width: auto;
+        padding: 0;
+    }
+
     ul {
         display: flex;
         gap: 15px;
@@ -13,12 +19,24 @@
 
         li {
             font-size: 18px;
-            font-weight: 700;
+            font-weight: 600;
             color: vars.$dark-grayish-blue-l;
+            
+            @include mixins.desktop {
+                font-size: 1rem;
+            }
 
             &:hover {
-                color: vars.$bright-blue;
+                color: vars.$very-dark-grayish-blue-l;
             }
         }
+    }
+}
+
+.show {
+    display: none;
+
+    @include mixins.desktop {
+        display: flex;
     }
 }

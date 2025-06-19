@@ -57,7 +57,7 @@ const TodoMain = () => {
                     onDeleteTodo={handleDeleteTodo}
                 />
 
-                <AsideNav/>
+                <AsideNav version="mob"/>
             </section>
 
             <div className="conatiner-text">

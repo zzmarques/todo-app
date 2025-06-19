@@ -1,5 +1,6 @@
 import "../../sass/components/_CardTodo.scss";
 import type { TodoType } from "../../types/todo";
+import AsideNav from "../AsideNav";
 import BtnDelete from "../BtnDelete";
 import Todo from "../Todo";
 
@@ -27,6 +28,9 @@ const CardTodo = ({ todos, onToggleTodo, onDeleteTodo }: CardTodoProps) => {
 
             <div className="container-footer">
                 <span className="sub">5 items left</span>
+                
+                <AsideNav version="desk"/>
+                
 
                 <BtnDelete />
             </div>
