@@ -11,6 +11,11 @@
     margin-top: 41px;
     margin-bottom: 30px;
 
+    @include mixins.desktop {
+        max-width: 550px;
+    }
+
+
     .logo {
         display: flex;
         justify-content: flex-end;
