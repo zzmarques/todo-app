@@ -17,7 +17,6 @@ const TodoMain = () => {
         setAllCompleted(newStatus);
     };
 
-
     const handleAddTodo = (name: string) => {
         const newTodo: TodoType = {
             id: Date.now(),
@@ -38,7 +37,11 @@ const TodoMain = () => {
 
     const handleDeleteTodo = (id: number) => {
         setTodos((prev) => prev.filter((todo) => todo.id !== id));
-    };  
+    }; 
+
+    const handleClearCompleted = () => {
+        setTodos(prev => prev.filter(todo => !todo.isActive));
+    } 
     
     return (
         <main className='todo-main'>
@@ -55,6 +58,7 @@ const TodoMain = () => {
                     todos={todos}
                     onToggleTodo={handleToggleTodo}
                     onDeleteTodo={handleDeleteTodo}
+                    onClearCompleted={handleClearCompleted}
                 />
 
                 <AsideNav version="mob"/>

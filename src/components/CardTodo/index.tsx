@@ -9,9 +9,10 @@ type CardTodoProps = {
     todos: TodoType[];
     onToggleTodo: (id: number) => void;
     onDeleteTodo: (id: number) => void;
+    onClearCompleted: () => void;
 };
 
-const CardTodo = ({ todos, onToggleTodo, onDeleteTodo }: CardTodoProps) => {
+const CardTodo = ({ todos, onToggleTodo, onDeleteTodo, onClearCompleted }: CardTodoProps) => {
     return (
         <section className="card-todo">
 
@@ -32,7 +33,7 @@ const CardTodo = ({ todos, onToggleTodo, onDeleteTodo }: CardTodoProps) => {
                 <AsideNav version="desk"/>
                 
 
-                <BtnDelete />
+                <BtnDelete onClearCompleted={onClearCompleted}/>
             </div>
         </section>
     );

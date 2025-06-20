@@ -1,7 +1,14 @@
 
-const BtnDelete = () => {
+type BtnDeleteProps = {
+    onClearCompleted: () => void;
+};
+
+const BtnDelete = ({ onClearCompleted }: BtnDeleteProps) => {
     return (
-        <button className="btn-clear">
+        <button 
+            className="btn-clear" 
+            onClick={onClearCompleted}
+        >
             Clear Completed
         </button>
     );
