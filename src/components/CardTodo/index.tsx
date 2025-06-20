@@ -13,6 +13,9 @@ type CardTodoProps = {
 };
 
 const CardTodo = ({ todos, onToggleTodo, onDeleteTodo, onClearCompleted }: CardTodoProps) => {
+
+    const remainingTodos: number = todos.filter(todo => !todo.isActive).length;
+
     return (
         <section className="card-todo">
 
@@ -28,7 +31,7 @@ const CardTodo = ({ todos, onToggleTodo, onDeleteTodo, onClearCompleted }: CardT
             </div>
 
             <div className="container-footer">
-                <span className="sub">5 items left</span>
+                <span className="sub">{remainingTodos} items left</span>
                 
                 <AsideNav version="desk"/>
                 
