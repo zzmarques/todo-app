@@ -9,6 +9,7 @@
     height: 55px;
     padding-inline: 20px;
     border-bottom: 1px solid vars.$light-grayish-blue;
+    cursor: pointer;
 
     .container-mtn {
         display: flex;
@@ -30,18 +31,8 @@
         }
     }
 
-    .btn-ex {
-        @include mixins.center;
-        padding-top: 5px;
-
-        svg {
-            font-size: .9rem;
-            color: vars.$very-dark-grayish-blue-l;
-
-            @include mixins.desktop {
-                font-size: 1.2rem;
-            }
-        }
+    &:hover .btn-ex {
+        display: flex;
     }
 }
 

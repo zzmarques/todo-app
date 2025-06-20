@@ -2,6 +2,7 @@
 @use "../mixins";
 
 .mark {
+    cursor: pointer;
     flex-shrink: 0;
     width: 25px;
     height: 25px;

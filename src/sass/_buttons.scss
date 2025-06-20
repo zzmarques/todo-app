@@ -1,4 +1,5 @@
 @use "./vars";
+@use "./mixins";
 
 .btn-clear {
     cursor: pointer;
@@ -30,4 +31,20 @@
 
     font-size: 1.3rem;
     color: vars.$very-light-gray;
+}
+
+.btn-ex {
+    cursor: pointer;
+    @include mixins.center;
+    padding-top: 5px;
+    display: none;
+
+    svg {
+        font-size: .9rem;
+        color: vars.$very-dark-grayish-blue-l;
+
+        @include mixins.desktop {
+            font-size: 1.2rem;
+        }
+    }
 }

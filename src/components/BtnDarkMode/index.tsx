@@ -11,12 +11,12 @@ const BtnDarkMode = () => {
     };
 
     useEffect(() => {
-        const todoMain = document.querySelector('.todo-main');
+        const body = document.querySelector('body');
 
         if(darkMode) {
-            todoMain?.classList.add('dark');
+            body?.classList.add('dark');
         } else {
-            todoMain?.classList.remove('dark');
+            body?.classList.remove('dark');
         }
 
 

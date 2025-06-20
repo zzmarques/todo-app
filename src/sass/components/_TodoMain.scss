@@ -29,8 +29,12 @@
         width: 100%;
     }
 
-    .conatiner-text {
+    .conatiner-txt {
         margin-top: 50px;
+
+        @include mixins.desktop {
+            padding-bottom: 40px;
+        }
 
         p {
             font-size: 1.125rem;
@@ -41,116 +45,120 @@
 }
 
 .dark {
-    background-image: url("../../assets/imgs/bg-mobile-dark.jpg"),
-    linear-gradient(to bottom, vars.$very-dark-blue 60%, vars.$very-dark-blue 100%);
-
-    @include mixins.desktop {
-        background-image: url("../../assets/imgs/bg-desktop-dark.jpg"),
+    background-color: vars.$very-dark-blue;
+    .todo-main {
+        background-image: url("../../assets/imgs/bg-mobile-dark.jpg"),
         linear-gradient(to bottom, vars.$very-dark-blue 60%, vars.$very-dark-blue 100%);
-    }
 
-    .container-todos {
-
-        .container-create-todo {
-            background: vars.$very-dark-desaturated-blue;
-
-            .container-input {
-                input {
-    
-                    color: vars.$light-grayish-blue-200;
-    
-                    &::placeholder {
-                        color: vars.$dark-grayish-blue;
-                    }
-                }
-            }
-
+        @include mixins.desktop {
+            background-image: url("../../assets/imgs/bg-desktop-dark.jpg"),
+            linear-gradient(to bottom, vars.$very-dark-blue 60%, vars.$very-dark-blue 100%);
         }
-    }
 
-    .conatiner-text {
+        .container-todos {
 
-        p {
-            color: vars.$very-dark-grayish-blue-100;
-        }
-    }
+            .container-create-todo {
+                background: vars.$very-dark-desaturated-blue;
 
-    .card-todo {
-        background: vars.$very-dark-desaturated-blue;
-        box-shadow: none;
-
-        .container-card-todos {
-            .todo {
-                border-bottom: 1px solid vars.$very-dark-grayish-blue-200;
-                .container-mtn {
-
-                    .container-name {
-
-                        span {
-                            color: vars.$light-grayish-blue-200;
+                .container-input {
+                    input {
+        
+                        color: vars.$light-grayish-blue-200;
+        
+                        &::placeholder {
+                            color: vars.$dark-grayish-blue;
                         }
                     }
                 }
 
-                .btn-ex {
+            }
+        }
 
-                    svg {
-                        color: vars.$very-dark-grayish-blue-100;
+        .conatiner-text {
+
+            p {
+                color: vars.$very-dark-grayish-blue-100;
+            }
+        }
+
+        .card-todo {
+            background: vars.$very-dark-desaturated-blue;
+            box-shadow: none;
+
+            .container-card-todos {
+                .todo {
+                    border-bottom: 1px solid vars.$very-dark-grayish-blue-200;
+                    .container-mtn {
+
+                        .container-name {
+
+                            span {
+                                color: vars.$light-grayish-blue-200;
+                            }
+                        }
+                    }
+
+                    .btn-ex {
+
+                        svg {
+                            color: vars.$very-dark-grayish-blue-100;
+                        }
+                    }
+                }
+
+                .complete {
+                    span {
+                        color: vars.$very-dark-grayish-blue-100 !important;
+                        text-decoration: line-through;
                     }
                 }
             }
 
-            .complete {
-                span {
-                    color: vars.$very-dark-grayish-blue-100 !important;
-                    text-decoration: line-through;
+            .container-footer {
+                .sub {
+                    color:  vars.$dark-grayish-blue;
+                }
+
+                .btn-clear {
+                    color:  vars.$dark-grayish-blue;
+
+                    &:hover {
+                        color:  vars.$light-grayish-blue-100;
+                    }
                 }
             }
         }
 
-        .container-footer {
-            .sub {
-                color:  vars.$dark-grayish-blue;
-            }
+        .aside-nav {
+            background: vars.$very-dark-desaturated-blue;
 
-            .btn-clear {
-                color:  vars.$dark-grayish-blue;
+            ul {
+                li {
+                    color:  vars.$dark-grayish-blue;
 
-                &:hover {
-                    color:  vars.$light-grayish-blue-100;
+                    &:hover {
+                        color:  vars.$light-grayish-blue-100;
+                    }
                 }
             }
         }
-    }
 
-    .aside-nav {
-        background: vars.$very-dark-desaturated-blue;
+        .mark {
+            border-color: vars.$very-dark-grayish-blue-200;
 
-        ul {
-            li {
-                color:  vars.$dark-grayish-blue;
-
-                &:hover {
-                    color:  vars.$light-grayish-blue-100;
-                }
+            &:hover {
+                background: 
+                    linear-gradient(vars.$very-dark-desaturated-blue, vars.$very-dark-desaturated-blue) padding-box, 
+                    vars.$Check-Background border-box;
             }
-        }
-    }
 
-    .mark {
-        border-color: vars.$very-dark-grayish-blue-200;
-
-        &:hover {
-            background: 
-                linear-gradient(vars.$very-dark-desaturated-blue, vars.$very-dark-desaturated-blue) padding-box, 
-                vars.$Check-Background border-box;
         }
 
-    }
+        .conatiner-text {
 
-    .conatiner-text {
-        p {
-            color: vars.$very-dark-grayish-blue-100;
+            p {
+                color: vars.$very-dark-grayish-blue-100;
+            }
         }
     }
 }

@@ -64,7 +64,7 @@ const TodoMain = () => {
                 <AsideNav version="mob"/>
             </section>
 
-            <div className="conatiner-text">
+            <div className="conatiner-txt">
                 <p>Drag and drop to reorder list</p>
             </div>
         </main>
