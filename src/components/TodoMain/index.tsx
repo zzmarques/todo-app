@@ -70,7 +70,7 @@ const TodoMain = () => {
                 />
             </section>
 
-            <div className="conatiner-txt">
+            <div className="container-txt">
                 <p>Drag and drop to reorder list</p>
             </div>
         </main>
