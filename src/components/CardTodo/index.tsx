@@ -1,10 +1,9 @@
-import { useState } from "react";
-import "../../sass/components/_CardTodo.scss";
+import { useTodoFilter } from "../../hooks/useTodoFilter";
 import type { TodoType } from "../../types/todo";
 import AsideNav from "../AsideNav";
 import BtnDelete from "../BtnDelete";
 import Todo from "../Todo";
-
+import "../../sass/components/_CardTodo.scss";
 
 type CardTodoProps = {
     todos: TodoType[];
@@ -15,16 +14,9 @@ type CardTodoProps = {
 
 const CardTodo = ({ todos, onToggleTodo, onDeleteTodo, onClearCompleted }: CardTodoProps) => {
 
-    const [filter, setFilter] = useState<"all" | "active" | "completed" | "">("");
+    const { filter, setFilter, filteredTasks } = useTodoFilter(todos);
 
     const remainingTodos: number = todos.filter(todo => !todo.isActive).length;
-
-    const filteredTasks = todos.filter((task) => {
-        if (filter === "all") return true;
-        if (filter === "active") return !task.isActive;
-        if (filter === "completed") return task.isActive;
-        return true;
-    });
 
     return (
         <section className="card-todo">
@@ -44,9 +36,9 @@ const CardTodo = ({ todos, onToggleTodo, onDeleteTodo, onClearCompleted }: CardT
                 <span className="sub">{remainingTodos} items left</span>
                 
                 <AsideNav 
-                    version="desk"
-                    onChangeFilter={setFilter}
-                    currentFilter={filter} 
+                    version="desk" 
+                    onChangeFilter={setFilter} 
+                    currentFilter={filter}
                 />
                 
 

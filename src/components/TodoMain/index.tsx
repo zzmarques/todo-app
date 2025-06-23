@@ -1,15 +1,17 @@
 import { useState } from "react";
-import "../../sass/components/_TodoMain.scss";
+import { useTodoFilter } from "../../hooks/useTodoFilter";
+import type { TodoType } from "../../types/todo";
 import AsideNav from "../AsideNav";
 import CardTodo from "../CardTodo";
 import CreateTodo from "../CreateTodo";
 import Header from "../Header";
-import type { TodoType } from "../../types/todo";
+import "../../sass/components/_TodoMain.scss";
 
 const TodoMain = () => {
 
     const [todos, setTodos] = useState<TodoType[]>([]);
     const [allCompleted, setAllCompleted] = useState<boolean>(false);
+    const { filter, setFilter, filteredTasks } = useTodoFilter(todos);
 
     const handleToggleAll = () => {
         const newStatus = !allCompleted;
@@ -55,13 +57,17 @@ const TodoMain = () => {
                 />
 
                 <CardTodo 
-                    todos={todos}
+                    todos={filteredTasks}
                     onToggleTodo={handleToggleTodo}
                     onDeleteTodo={handleDeleteTodo}
                     onClearCompleted={handleClearCompleted}
                 />
 
-                <AsideNav version="mob"/>
+                <AsideNav 
+                    version="mob" 
+                    onChangeFilter={setFilter} 
+                    currentFilter={filter}
+                />
             </section>
 
             <div className="conatiner-txt">
