@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "../../sass/components/_CardTodo.scss";
 import type { TodoType } from "../../types/todo";
 import AsideNav from "../AsideNav";
@@ -14,13 +15,22 @@ type CardTodoProps = {
 
 const CardTodo = ({ todos, onToggleTodo, onDeleteTodo, onClearCompleted }: CardTodoProps) => {
 
+    const [filter, setFilter] = useState<"all" | "active" | "completed" | "">("");
+
     const remainingTodos: number = todos.filter(todo => !todo.isActive).length;
+
+    const filteredTasks = todos.filter((task) => {
+        if (filter === "all") return true;
+        if (filter === "active") return !task.isActive;
+        if (filter === "completed") return task.isActive;
+        return true;
+    });
 
     return (
         <section className="card-todo">
 
-            <div className="container-card-todos">
-                {todos.map((todo) => (
+            <div className="container-card-toados">
+                {filteredTasks.map((todo) => (
                     <Todo 
                         key={todo.id}
                         task={todo}
@@ -33,7 +43,11 @@ const CardTodo = ({ todos, onToggleTodo, onDeleteTodo, onClearCompleted }: CardT
             <div className="container-footer">
                 <span className="sub">{remainingTodos} items left</span>
                 
-                <AsideNav version="desk"/>
+                <AsideNav 
+                    version="desk"
+                    onChangeFilter={setFilter}
+                    currentFilter={filter} 
+                />
                 
 
                 <BtnDelete onClearCompleted={onClearCompleted}/>

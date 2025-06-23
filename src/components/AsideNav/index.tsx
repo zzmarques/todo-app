@@ -1,16 +1,36 @@
 import "../../sass/components/_AsideNav.scss";
 
 type VersionProps  = {
-    version: string
+    version: string;
+    onChangeFilter: (filter: "all" | "active" | "completed") => void;
+    currentFilter: "all" | "active" | "completed" | "";
 }
 
-const AsideNav = ({ version }: VersionProps) => {
+const AsideNav = ({ version, onChangeFilter, currentFilter }: VersionProps) => {
     return (
         <aside className={`aside-nav ${version !== "mob" ? 'show' : ''}`}>
             <ul>
-                <li>All</li>
-                <li>Active</li>
-                <li>Completed</li>
+                <li 
+                    className={currentFilter === "all" ? "ativo" : ""}
+                    onClick={() => onChangeFilter("all")}
+                >
+                    All
+                </li>
+
+                <li 
+                    className={currentFilter === "active" ? "ativo" : ""}
+                    onClick={() => onChangeFilter("active")}
+                >
+                    Active
+                </li>
+
+
+                <li 
+                    className={currentFilter === "completed" ? "ativo" : ""}
+                    onClick={() => onChangeFilter("completed")}
+                >
+                    Completed
+                </li>
             </ul>
         </aside>
     );

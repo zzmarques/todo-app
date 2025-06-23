@@ -32,6 +32,12 @@
             }
         }
     }
+
+    ul {
+        .ativo {
+            color: vars.$bright-blue;
+        }
+    }
 }
 
 .show {
